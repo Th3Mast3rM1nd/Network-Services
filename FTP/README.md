@@ -8,7 +8,11 @@ Used to Transfer Files From Server To The client and runs on Port 21.
 ftp ip-address 
 ```
 
+scearnshot 
 
+* ***Enumrating FTP*** 
+
+nmap --
 
 
 
