@@ -50,6 +50,6 @@ nmap -sS -sT -sV -A -p- ip # port 111,2049
 * ***mount the sahres***
 <pre id="fence-code-2" class="fence-code has-commands">
 <code>
-sudo mount -t nfs 127.0.0.1:/sharename ./nfs-folder -nolock 
+sudo mount -t nfs 127.0.0.1:/sharename ./nfs-folder -nolock
 </code>
 </pre>
