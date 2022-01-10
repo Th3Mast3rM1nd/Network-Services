@@ -32,6 +32,42 @@ telnet 127.0.0.1 25
 ```
 <img width="712" alt="Screen Shot 2021-12-15 at 17 30 41" src="https://user-images.githubusercontent.com/92652606/146225924-faa1bf12-1d79-4fa0-baa6-2d307acb214d.png">
 
+```python 
+#!/usr/bin/python2
 
+#python script to bruteforce usernames
+
+import socket
+import sys
+
+if len(sys.argv) != 2:
+        print("Usage: vrfy.py ./userlist.txt")
+        sys.exit(0)
+else:
+    filename = sys.argv[1]
+
+try:
+    with open(filename, "r") as f:
+        usernames = [line.strip() for line in f]
+except FileNotFoundError:
+    print("file not found")
+
+print(usernames)
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+connect = s.connect(('127.0.0.1',25))
+
+banner = s.recv(1024)
+
+print(banner)
+for username in usernames:
+    print(username)
+    s.send('VRFY  ' + username +  '\r\n')
+    result = s.recv(1024)
+    print(result)
+
+s.close()
+```
 
 
