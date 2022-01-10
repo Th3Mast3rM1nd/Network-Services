@@ -107,4 +107,12 @@ sudo mount -t cifs -o username=Anonymous,password=Anonymous  //IP/sharename  ./
 ![Screenshot from 2021-12-08 00-12-41](https://user-images.githubusercontent.com/92652606/145125582-3f7c6506-56da-4a98-afb2-271fdaf9004f.png)
 
 
+***nbtscan***
+
+```shell
+sudo nbtscan -r 192.168.1.0/24  # scan for smb 
+
+```
+![Screenshot from 2022-01-10 15-05-09](https://user-images.githubusercontent.com/92652606/148788541-1cc2f389-e142-4066-99f9-66b965301507.png)
+
 
