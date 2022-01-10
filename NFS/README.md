@@ -6,6 +6,9 @@ NFS is  a file system mechanism that can store and retrieve data from multiple d
 * ***NFS Enumeration***
 
 ```shell
+nmap -sV -p 111 --script=rpcinfo 10.10.10.10 #
+```
+```shell
 nmap -sS -sT -sV -A -p- ip # port 111,2049
 ```
 <pre id="fence-code-2" class="fence-code has-commands">
