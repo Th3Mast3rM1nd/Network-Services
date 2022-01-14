@@ -15,6 +15,11 @@
 
 * ***Connect to SMB With User and Password***
 
+```shell
+smbclinet -N -L ip # null session ( anonymous access  ) 
+```
+![Screenshot from 2022-01-14 14-31-57](https://user-images.githubusercontent.com/92652606/149532506-efaa2c22-f005-4f80-b7f8-c3ccb7c1e61f.png)
+
 ```shell 
 smbclient //IP/SharedFolder -U "Username"
 ```
@@ -114,5 +119,32 @@ sudo nbtscan -r 192.168.1.0/24  # scan for smb
 
 ```
 ![Screenshot from 2022-01-10 15-05-09](https://user-images.githubusercontent.com/92652606/148788541-1cc2f389-e142-4066-99f9-66b965301507.png)
+
+***SMB Enumeration Using RPCclient***
+
+```shell
+rpcclient -U "" 127.0.0.1 # -U "" for anonymous 
+```
+```shell
+rpcclient commands > srvinfo : Server information.
+enumdomains > enumerat all Domains
+querydominfo > Query Domain server and user info 
+netshareenumall > Enumerate all shares 
+enumdomusers > Enumerate all Domain Users
+```
+![Screenshot from 2022-01-14 14-47-29](https://user-images.githubusercontent.com/92652606/149535021-a50117eb-43fb-4e61-b996-cb676331c357.png)
+
+***SMBMap***
+
+[Github SMBMap](https://github.com/ShawnDEvans/smbmap)
+
+![Screenshot from 2022-01-14 14-58-03](https://user-images.githubusercontent.com/92652606/149536699-16cfef08-050c-4bf3-bd3d-f3a11d5e426d.png)
+
+
+***CrackMapExec***
+
+[Github CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec)
+
+![Screenshot from 2022-01-14 15-03-54](https://user-images.githubusercontent.com/92652606/149537593-b638fcf2-3511-4e86-94bf-f7a209776c75.png)
 
 
