@@ -29,7 +29,7 @@ mysql -u root -ptoor 127.0.0.1 # with a password
 ```
 
 MYSQL command 
-
+```
 mysql -u <user> -p<password> <IP address> 
 
 show databases; 
@@ -44,3 +44,4 @@ select * from <table>;
 
 select * from <table> where <column> = "<string>"; 	
 
+```
