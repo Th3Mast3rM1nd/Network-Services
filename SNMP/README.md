@@ -1,17 +1,30 @@
 # SNMP ( Simple Network Management Protocol ) 
 
+it is a protocol for monitoring and managing network devices ( routers, switches, servers, IoT devices ) UDP port 161 
+
+
+Community Strings .
+
+
+
 ***SNMP Enumeration***
 
-* snmp runs on udp port 161 
 
 ```shell
-sudo nmap -T4 -sU -p 161 ip 
+sudo nmap -T4 -sU -A -p 161 127.0.0.1
 ```
 
 ```shell
-onesixtyone -c dict.txt 192.168.1.110
+
+onesixtyone -c /usr/share/wordlist/secLists/Discovery/SNMP/snmp.txt 127.0.0.1 # bruteforce Community String 
 
 ```
+
+```shell
+braa public@10.253.101.1:161:.1.3.6.* 
+ 
+```
+
 
 ***Windows***
 
