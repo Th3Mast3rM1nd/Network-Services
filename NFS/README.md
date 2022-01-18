@@ -3,13 +3,16 @@
 
 NFS is  a file system mechanism that can store and retrieve data from multiple disks and directories through a shared network and runs on Port 111 (TCP and UDP) and 2049 (TCP and UDP) for the NFS server.
 
+NFS is based on the Open Network Computing Remote Procedure Call (ONC-RPC/SUN-RPC) protocol exposed on TCP and UDP ports 111.
+
 * ***NFS Enumeration***
+
 
 ```shell
 nmap -sV -p 111 --script=rpcinfo 10.10.10.10 #
 ```
 ```shell
-nmap -sS -sT -sV -A -p- ip # port 111,2049
+nmap -Pn -sS -A -p111,2049 ip # port 111,2049
 ```
 <pre id="fence-code-2" class="fence-code has-commands">
 <code>
@@ -54,5 +57,7 @@ nmap -sS -sT -sV -A -p- ip # port 111,2049
 <pre id="fence-code-2" class="fence-code has-commands">
 <code>
 sudo mount -t nfs 127.0.0.1:/sharename ./nfs-folder -nolock
+
+sudo umount ./nfs-folder # to unmount 
 </code>
 </pre>
