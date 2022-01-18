@@ -1,9 +1,10 @@
 # SMTP ( Simple Mail Transfer Protocol ) 
 
-SMTP is used to send and receive mail messages and runs on Port 25.
+SMTP is used to send and receive mail messages and runs on Port 25. newer SMTP on port 587 . 
 
 SMTP understand Some Simple Text Commands :  
 
+    AUTH PLAIN - AUTH is a service extension used to authenticate the client
     HELO - introduce yourself
     EHLO - introduce yourself and request extended mode
     MAIL FROM: - specify the sender
@@ -17,6 +18,11 @@ SMTP understand Some Simple Text Commands :
     VERB - verbose
     
 * ***Enumerating SMTP***
+
+```shell
+sudo nmap --script smtp-open-relay -p 25 ip # https://nmap.org/nsedoc/scripts/smtp-open-relay.html 
+
+``` 
 
 ```shell
 nmap -sS -A -p 25,587,2525,456,25025 ip  # 456, 25025 used for smtp with SSL
