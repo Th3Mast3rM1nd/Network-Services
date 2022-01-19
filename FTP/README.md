@@ -22,7 +22,7 @@ openssl s_client -connect 1127.0.0.1:21 -starttls ftp # if ftp runs with ssl/tls
 * ***Enumrating FTP*** 
 
 ```shell
-nmap -script=ftp-anon-p 21 10.10.0.1
+nmap -script=ftp-anon -p 21 10.10.0.1
 
 nmap -Pn -sC -sV -p21 192.168.1.11
 
