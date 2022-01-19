@@ -17,6 +17,8 @@ nmap -sV -sC 10.129.201.248 -p3389 --script rdp*
 
 ```shell
 rdesktop -u username -p password 127.0.0.1 # or xfreerdp,Remmina
+
+xfreerdp /u:<user> /p:"<password>" /v:IP
 ```
 # WinRM 
 
