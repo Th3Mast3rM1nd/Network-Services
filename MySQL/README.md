@@ -44,4 +44,10 @@ select * from <table>;
 
 select * from <table> where <column> = "<string>"; 	
 
+\! shell-command # \! ifconfig 
+
+ select  LOAD_FILE('/home/file.txt');
+ 
+
 ```
+
