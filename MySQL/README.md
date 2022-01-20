@@ -24,7 +24,7 @@ mysql -u root -h 127.0.0.1
 
 ```
 ```shell
-mysql -u root -ptoor 127.0.0.1 # with a password 
+mysql -u root -h 127.0.0.1 -P 3306 -pPassword # with a password 
 
 ```
 
