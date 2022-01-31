@@ -1,6 +1,6 @@
 # Telnet 
 
- Telnet is an unencrypted and therefore insecure protocol and runs on Port 32
+ Telnet is an unencrypted and therefore insecure protocol and runs on Port 23
 
 * ***Connect To Telnet***
 
